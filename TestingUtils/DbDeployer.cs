@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace PubComp.Testing.TestingUtils
@@ -41,8 +43,15 @@ namespace PubComp.Testing.TestingUtils
         }
 
         public static void DeployDacPac(string sqlPackagePath, string dacPacPath, string connectionString,
-            TestContext testContext, bool recreateDatabase = true)
+            TestContext testContext, bool recreateDatabase = true, IEnumerable<KeyValuePair<string, string>> variables = null)
         {
+            var vars = string.Empty;
+
+            if (variables != null)
+            {
+                vars = string.Join(string.Empty, variables.Select(v => string.Concat(" /Variables:", v.Key, "=", v.Value)));
+            }
+
             using (var process = Process.Start(
                 new ProcessStartInfo
                 {
@@ -51,12 +60,21 @@ namespace PubComp.Testing.TestingUtils
                         + @" /TargetConnectionString:" + '"' + connectionString + '"'
                         + @" /Properties:CreateNewDatabase=" + recreateDatabase
                         + @" /Properties:BlockOnPossibleDataLoss=False"
-                        + @" /Quiet:True",
-                    WindowStyle = IsDebug ? ProcessWindowStyle.Normal : ProcessWindowStyle.Hidden,
-                    CreateNoWindow = !IsDebug,
+                        + @" /Quiet:True"
+                        + vars,
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    CreateNoWindow = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
                 }))
             {
                 process.WaitForExit();
+
+                if (process.ExitCode != 0)
+                {
+                    var errorMessage = process.StandardError.ReadToEnd();
+                    Assert.Fail(errorMessage);
+                }
             }
         }
     }
