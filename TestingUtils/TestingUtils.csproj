@@ -54,34 +54,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
     <Compile Include="DbDeployer.cs" />
     <Compile Include="LinqAssert.cs" />
     <Compile Include="NumericAssert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestResourceFinder.cs" />
     <Compile Include="TestSignal.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SqlPackage\DacUnpack.exe" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Contracts.11.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Contracts.12.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Schema.Sql.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Schema.Tasks.Sql.11.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Schema.Tasks.Sql.12.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Schema.Utilities.Sql.11.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Schema.Utilities.Sql.12.dll" />
-    <None Include="SqlPackage\Microsoft.Data.Tools.Utilities.dll" />
-    <None Include="SqlPackage\Microsoft.SqlServer.Dac.dll" />
-    <None Include="SqlPackage\Microsoft.SqlServer.Dac.Extensions.dll" />
-    <None Include="SqlPackage\Microsoft.SqlServer.Dac.Extensions.xml" />
-    <None Include="SqlPackage\Microsoft.SqlServer.Dac.xml" />
-    <None Include="SqlPackage\Redist_DACFramework.txt" />
-    <None Include="SqlPackage\SqlPackage.exe" />
-    <None Include="SqlPackage\SsdtCompatibility11.xml" />
-    <None Include="SqlPackage\SsdtCompatibility12.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SqlPackage\SqlPackage.exe.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

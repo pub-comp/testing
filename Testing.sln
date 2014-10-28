@@ -5,15 +5,33 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingUtils", "TestingUtils\TestingUtils.csproj", "{952C55FE-6425-4976-A203-7C3BED98C693}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{81308B8C-834B-4200-A999-44715B2D924F}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.exe = NuGet.exe
+		NuGetPack.exe = NuGetPack.exe
+		VersionHistory.txt = VersionHistory.txt
+		VersionInfo.cs = VersionInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingUtils.NuGet", "TestingUtils.NuGet\TestingUtils.NuGet.csproj", "{C6AB7A44-D85C-4161-968A-838461C3D777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlPackage.Unofficial.NuGet", "SqlPackage.Unofficial.NuGet\SqlPackage.Unofficial.NuGet.csproj", "{03213485-38A8-43B7-A24A-47F25AA2BD26}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
+		SccNumberOfProjects = 4
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs27
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = TestingUtils\\TestingUtils.csproj
 		SccProjectName1 = TestingUtils
 		SccLocalPath1 = TestingUtils
+		SccProjectUniqueName2 = TestingUtils.NuGet\\TestingUtils.NuGet.csproj
+		SccProjectName2 = TestingUtils.NuGet
+		SccLocalPath2 = TestingUtils.NuGet
+		SccProjectUniqueName3 = SqlPackage.Unofficial.NuGet\\SqlPackage.Unofficial.NuGet.csproj
+		SccProjectName3 = SqlPackage.Unofficial.NuGet
+		SccLocalPath3 = SqlPackage.Unofficial.NuGet
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +42,14 @@ Global
 		{952C55FE-6425-4976-A203-7C3BED98C693}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{952C55FE-6425-4976-A203-7C3BED98C693}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{952C55FE-6425-4976-A203-7C3BED98C693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AB7A44-D85C-4161-968A-838461C3D777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AB7A44-D85C-4161-968A-838461C3D777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AB7A44-D85C-4161-968A-838461C3D777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AB7A44-D85C-4161-968A-838461C3D777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03213485-38A8-43B7-A24A-47F25AA2BD26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03213485-38A8-43B7-A24A-47F25AA2BD26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03213485-38A8-43B7-A24A-47F25AA2BD26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03213485-38A8-43B7-A24A-47F25AA2BD26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

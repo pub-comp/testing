@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03213485-38A8-43B7-A24A-47F25AA2BD26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlPackage.Unofficial.NuGet</RootNamespace>
+    <AssemblyName>SqlPackage.Unofficial.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sln\DacUnpack.exe" />
+    <Content Include="sln\Microsoft.Data.Tools.Contracts.11.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Contracts.12.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Schema.Sql.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Schema.Tasks.Sql.11.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Schema.Tasks.Sql.12.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Schema.Utilities.Sql.11.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Schema.Utilities.Sql.12.dll" />
+    <Content Include="sln\Microsoft.Data.Tools.Utilities.dll" />
+    <Content Include="sln\Microsoft.SqlServer.Dac.dll" />
+    <Content Include="sln\Microsoft.SqlServer.Dac.Extensions.dll" />
+    <Content Include="sln\Microsoft.SqlServer.Dac.Extensions.xml" />
+    <Content Include="sln\Microsoft.SqlServer.Dac.xml" />
+    <Content Include="sln\Redist_DACFramework.txt" />
+    <Content Include="sln\SqlPackage.exe" />
+    <Content Include="sln\SsdtCompatibility11.xml" />
+    <Content Include="sln\SsdtCompatibility12.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sln\SqlPackage.exe.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)NuGetPack.exe "$(ProjectPath)" "$(TargetPath)" $(ConfigurationName)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

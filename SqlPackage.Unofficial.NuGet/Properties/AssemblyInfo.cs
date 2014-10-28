@@ -5,11 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PubComp.Testing.TestingUtils")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SqlPackage, MSSQL, SQL Server, DacPac, SSDT, Deploy")]
+[assembly: AssemblyDescription("Unofficial package containing SqlPackage.exe command-line utility, from SQL Server 2012 (11.0)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("PubComp.Testing.TestingUtils")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCompany("Unofficial")]
+[assembly: AssemblyProduct("SqlPackage.Unofficial")]
+[assembly: AssemblyCopyright("Copyright © Microsoft Corp")]
+[assembly: AssemblyTrademark("http://msdn.microsoft.com/en-us/library/hh550080.aspx")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -18,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f4e6374b-34dc-4e4d-8f3c-42ab98a637a6")]
+[assembly: Guid("276908d3-ca03-4ad2-a6eb-b2ad5581bd83")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -30,3 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("11.0.2902.0")]
+[assembly: AssemblyFileVersion("11.0.2902.0")]

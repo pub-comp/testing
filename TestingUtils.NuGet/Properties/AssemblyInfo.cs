@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PubComp.Testing.TestingUtils")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Test, Testing, LocalDB, SSDT, LINQ, MsTest, CICD, Multithreading, SqlPackage, MSSQL, SQL Server, DacPac, SSDT, Deploy, Resources")]
+[assembly: AssemblyDescription("Testing utilities: Resource finder, DB deployer, Asserts and more")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("PubComp.Testing.TestingUtils")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyProduct("PubComp.Testing.TestingUtils.NuGet")]
+[assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f4e6374b-34dc-4e4d-8f3c-42ab98a637a6")]
+[assembly: Guid("b4cdf75f-b4c2-42e5-a945-dfdcc956e2fc")]
 
 // Version information for an assembly consists of the following four values:
 //
