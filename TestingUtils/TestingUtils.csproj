@@ -62,7 +62,6 @@
     <Compile Include="NumericAssert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestResourceFinder.cs" />
-    <Compile Include="TestSignal.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

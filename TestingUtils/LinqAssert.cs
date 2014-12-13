@@ -7,6 +7,25 @@ namespace PubComp.Testing.TestingUtils
 {
     public static class LinqAssert
     {
+        public static void AreSame<TEntity>(IEnumerable<TEntity> expected, IEnumerable<TEntity> actual)
+        {
+            if (expected != null)
+                Assert.IsNotNull(actual);
+
+            if (expected == null)
+                Assert.IsNull(actual);
+
+            Assert.AreEqual(expected.Count(), actual.Count());
+
+            var enumer1 = expected.GetEnumerator();
+            var enumer2 = actual.GetEnumerator();
+
+            while (enumer1.MoveNext() && enumer2.MoveNext())
+            {
+                Assert.AreEqual(enumer1.Current, enumer2.Current);
+            }
+        }
+
         public static void Any<TEntity>(IEnumerable<TEntity> collection, Func<TEntity, bool> predicate, String conditionDescription = null)
         {
             Assert.IsTrue(
