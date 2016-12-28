@@ -18,21 +18,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlPackage.Unofficial.NuGet", "SqlPackage.Unofficial.NuGet\SqlPackage.Unofficial.NuGet.csproj", "{03213485-38A8-43B7-A24A-47F25AA2BD26}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs27
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = TestingUtils\\TestingUtils.csproj
-		SccProjectName1 = TestingUtils
-		SccLocalPath1 = TestingUtils
-		SccProjectUniqueName2 = TestingUtils.NuGet\\TestingUtils.NuGet.csproj
-		SccProjectName2 = TestingUtils.NuGet
-		SccLocalPath2 = TestingUtils.NuGet
-		SccProjectUniqueName3 = SqlPackage.Unofficial.NuGet\\SqlPackage.Unofficial.NuGet.csproj
-		SccProjectName3 = SqlPackage.Unofficial.NuGet
-		SccLocalPath3 = SqlPackage.Unofficial.NuGet
-	EndGlobalSection
+
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
